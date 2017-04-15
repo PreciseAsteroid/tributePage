@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="src/d3.v2.min.js" type="application/javascript"></script>
+    <script src="src/timeknots.js" type="application/javascript"></script>
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="cr cr-top cr-left cr-green">Tribute Page</div>
+    <header>
+      <h1>Boaz Neumann</h1>
+      <h3>1970-1915</h3>
+    </header>
+    <blockquote>It is not me, it is him...
+      <cite>Refering to Hitler in an explenation to why his courses are in high demand</cite>
+    </blockquote>
+    <figure><img src="https://library.osu.edu/projects/hebrew-lexicon/01161-files/image001.jpg" alt="profile picture" title="Boaz Neumann">
+      <figcaption>Boaz Neumann
+        <a href='https://library.osu.edu/projects/hebrew-lexicon/01161.php'>https://library.osu.edu/</a> </figcaption>
+    </figure>
+
+
+    <p>
+      Back in uni we were allowed to pick two courses from any discpline we wanted. Being a history beef, with a particular interest in Nazi Germani, picking the right course was easy. Boaz was the lecturer of the course named Introduction to Nazism I ended up picking.
+      I was so impressed with his fresh look and deep knowledge that I continued following him from afar. Last year I learned that he died after suffering from the cancer desease. Even though I did not know him at all I felt very sad. I guess we feel like that when we believe the world had lost a unique mind.
+    </p>
+    <h3>Time Line</h3>
+    <div id="timeline1" style="width:500px;"></div>
+    <!-- <div id="timeline2" style="width:500px;"></div> -->
+    <h3>In Points</h3>
+    <ul>
+      <li>You can learn nothing from Histroy. Every place in time has its own unique language and voice which are irrelevant for other events </li>
+      <li>My position is non judgemental. I try to understand and to accept the values and terms and above all the language of the era</li>
+      <li>History classes should develop original thinkers and not focus on memorizing facts</li>
+    </ul>
+
+    <h3>Links</h3>
+    <ul>
+      <i>Some in Hebrew</i>
+      <li>
+        <a href="http://boazneumann.com/">Boaz's personal site</a>
+      </li>
+      <li>
+        <a href="https://english.tau.ac.il/profile/boazne">Tel Aviv University Page</a>
+      </li>
+      <li>
+        <a href="https://he.wikipedia.org/wiki/%D7%91%D7%A2%D7%96_%D7%A0%D7%95%D7%99%D7%9E%D7%9F">Wikipedia Page</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/channel/UCRxCkYRzmdCTgRz-LVfPI3g">YouTube Channel</a>
+      </li>
+    </ul>
+
+<script type="text/javascript">
+var boazPoints = [
+  {
+  name: 'Born',
+  date: '1971'
+  },
+  {
+  name: 'BA degree, Political Science and General History',
+  date: '1995'
+  },
+  {
+  name: 'MA degree (summa cum laude), Modern History',
+  date: '1997'
+  },
+  {
+  name: 'Ph.D. (cum laude), Modern German History, Tel-Aviv University, Tel-Aviv',
+  date: '1999'
+  },
+  {
+  name: 'Nazi Weltanschauung - Space, Body, Language',
+  date: '2002',
+  img:'http://press2.haifa.ac.il/images/stories/books/reiyat_haolam.jpg'
+  },
+  {
+  name: 'Nazism - History, Historiography, Methodology ',
+  date: '2007',
+  img:'https://simania.co.il/bookimages/covers21/216344.jpg'
+  },
+  {
+  name: 'Being-in-the-Weimar-Republic',
+  date: '2008',
+  img:'http://www.am-oved.co.il/Media/Uploads/%D7%A2%D7%98%D7%99%D7%A4%D7%94_-_%D7%9C%D7%94%D7%99%D7%95%D7%AA_%D7%91%D7%A8%D7%A4%D7%95%D7%91%D7%9C%D7%99%D7%A7%D7%AA_%D7%95%D7%99%D7%99%D7%9E%D7%90%D7%A8(1).jpg'
+  },
+  {
+  name: 'Land and Desire in Early Zionism',
+  date: '2009',
+  img:'http://www.am-oved.co.il/Media/Uploads/%D7%A2%D7%98%D7%99%D7%A4%D7%94_-_%D7%AA%D7%A9%D7%95%D7%A7%D7%AA_%D7%94%D7%97%D7%9C%D7%95%D7%A6%D7%99%D7%9D(2).jpg'
+  },
+  {
+  name: 'Being-in-the-World',
+  date: '2014',
+  img:'http://www.am-oved.co.il/Media/Uploads/%D7%A2%D7%98%D7%99%D7%A4%D7%94_-_%D7%9C%D7%94%D7%99%D7%95%D7%AA_%D7%91%D7%A2%D7%95%D7%9C%D7%9D(2).jpg'
+  },
+  {
+  name: 'Death',
+  date: '2015'
+}];
+
+
+var kurbickFilms = [{name:"Day of the Fight", date: "1951-04-26", img: "http://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Day_of_the_Fight_title.jpg/215px-Day_of_the_Fight_title.jpg"},
+  {name:"The Seafarers", 	date:"1953-10-15", img: "http://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Seafarers_title.jpg/225px-Seafarers_title.jpg"},
+  {name:"Lolita (1962 film)", 	date:"1962-06-13", img: "http://upload.wikimedia.org/wikipedia/en/thumb/7/72/LolitaPoster.jpg/215px-LolitaPoster.jpg"},
+  {name:"Fear and Desire", date:	"1953-03-31", img: "http://upload.wikimedia.org/wikipedia/en/f/f7/Fear_and_Desire_Poster.jpg"},
+  {name:"Paths of Glory", date:	"1957-12-25", img: "http://upload.wikimedia.org/wikipedia/en/thumb/b/bc/PathsOfGloryPoster.jpg/220px-PathsOfGloryPoster.jpg"},
+  {name:"A Clockwork Orange (film)", date:	"1971-12-19", img: "http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Clockwork_orangeA.jpg/220px-Clockwork_orangeA.jpg"},
+  {name:"Killer's Kiss", date:	"1955-09-28", img: "http://upload.wikimedia.org/wikipedia/en/thumb/a/a6/KillersKissPoster.jpg/220px-KillersKissPoster.jpg"}
+];
+// TimeKnots.draw("#timeline1", kurbickFilms, {dateFormat: "%B %Y", color: "#696", width:500, showLabels: true, labelFormat: "%Y"});
+TimeKnots.draw("#timeline1", boazPoints, {dateFormat: "%Y", color: "#696", width:500, showLabels: true, labelFormat: "%Y"});
+</script>
+
+  </body>
+</html>
