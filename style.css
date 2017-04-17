@@ -52,8 +52,16 @@ h2 {
   padding-top: 1em;
 }
 
-h1,h2,strong {
+h3 {
+  margin-left: 1em;
+}
+
+h1,h2,h3,strong {
   color: #333;
+}
+
+p {
+  margin: 10px 25px;
 }
 
 q {
